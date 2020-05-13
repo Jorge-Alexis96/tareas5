@@ -1,0 +1,171 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image:
+	linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)),
+	url(./cuco-2019-2-1068x801.jpg);
+	background-size: cover;
+}
+
+svg {
+	width: 30px;
+	height: 30px;
+	fill: #1DB954;
+}
+
+.container {
+	padding: 15px;
+	max-width: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: auto;
+}
+
+.row {
+	display: flex;
+	width: 90%;
+	margin: auto;
+	margin-bottom: 15px;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.titulo {
+	background-color:#1DB954;
+	border-radius: 25px;
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-family: 'Comfortaa', cursive;
+	color: white;
+}
+
+.fields {
+	align-items: center;
+	justify-content: space-between;
+	font-family: 'Comfortaa', cursive;
+	color: white;
+}
+
+.fields>.field {
+	display: flex;
+}
+
+.fields>.field.field-inline>input {
+	width: 180px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid #1DB954;
+	outline: none;
+	color: white;
+	font-family: 'Comfortaa', cursive;
+}
+
+#ruc {
+	margin-left: 28px;
+}
+
+.form-producto {
+	display: flex;
+	flex-wrap: nowrap;
+	width: 100%;
+	font-family: 'Comfortaa', cursive;
+	color: white;
+}
+
+.form-producto .field.field-block {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	margin-right: 10px;
+}
+
+.form-producto .field.field-block:last-child {
+	margin-right: 0;
+}
+
+.form-producto .field.field-block>input {
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid #1DB954;
+	outline: none;
+	color: white;
+	font-family: 'Comfortaa', cursive;
+}
+
+table.invoice-detail {
+	width: 100%;
+	max-width: 600px;
+}
+
+.text-left {
+	text-align: left;
+	font-family: 'Comfortaa', cursive;
+	color: white;
+}
+
+.text-right {
+	text-align: right;
+	font-family: 'Comfortaa', cursive;
+	color: white;
+}
+
+table.invoice-detail thead {
+	background-color: #1DB954;
+}
+
+table.invoice-detail tbody tr {
+	background-color: rgba(29, 185, 84, 0.082);
+}
+
+table.invoice-detail tbody tr:nth-child(even) {
+	background-color: #1DB954;
+}
+
+table.invoice-detail tfoot tr {
+	background-color: #1DB954;
+}
+
+.guardar-factura {
+	font-family: 'Comfortaa', cursive;
+	width: 200px;
+	color: white;
+	line-height: 2;
+	padding: 5px;
+	background-color: transparent;
+	border: 2px solid white;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: all 0.25s;
+	cursor: pointer;
+	outline: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.guardar-factura svg {
+	margin-left: 15px;
+	fill: white;
+}
+
+.guardar-factura:hover {
+	background-color: #1DB954;
+	border: none;
+	border-radius: 20px;
+}
+
+.guardar-factura:active {
+	transform: scale(0.90);
+}
+
+.agregar-producto {
+	background-color: transparent;
+	border: none;
+	outline: none;
+}

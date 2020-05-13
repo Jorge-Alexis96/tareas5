@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="row">
+      <h1 class="titulo">Factura-N</h1>
+    </div>
+
+    <div class="row fields">
+      <div class="field field-inline">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre">
+      </div>
+      <div class="field field-inline">
+        <label for="fecha">Fecha:</label>
+        <input type="text" id="fecha">
+      </div>
+    </div>
+
+    <div class="row fields">
+      <div class="field field-inline">
+        <label for="ruc">RUC:</label>
+        <input type="text" id="ruc">
+      </div>
+      <div class="field field-inline">
+        <label for="nro">Nro:</label>
+        <input type="text" id="nro">
+      </div>
+    </div>
+
+    <div class="row">
+      <form id="facturaProducto" class="form-producto">
+        <div class="field field-block">
+          <label for="cantidad">Cantidad</label>
+          <input type="number" id="cantidad">
+        </div>
+        <div class="field field-block">
+          <label for="descripcion">Descripcion</label>
+          <input type="text" id="descripcion">
+        </div>
+        <div class="field field-block">
+          <label for="pUnit">P. Unit</label>
+          <input type="text" id="pUnit">
+        </div>
+        <div class="field field-block">
+          <label for="pTotal">P. Total</label>
+          <input type="number" id="pTotal" disabled value="0">
+        </div>
+      </form>
+
+    </div>
+
+    <div class="row justify-center">
+      <button class="agregar-producto" type="button" id="agregarProducto"><svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512">
+          <path
+            d="M506.513 124.12L387.879 5.486A18.813 18.813 0 00374.634 0H18.732C8.387 0 0 8.387 0 18.732v474.537C0 503.613 8.387 512 18.732 512h474.537c10.345 0 18.732-8.387 18.732-18.732V137.366a18.736 18.736 0 00-5.488-13.246zM156.098 37.463h199.805v110.823H156.098V37.463zM400.45 474.537h-288.9V316.935h288.9v157.602zm74.087 0h-36.623V298.204c0-10.345-8.387-18.732-18.732-18.732H92.818c-10.345 0-18.732 8.387-18.732 18.732v176.333H37.463V37.463h81.171v129.555c0 10.345 8.387 18.732 18.732 18.732h237.268c10.345 0 18.732-8.387 18.732-18.732V63.954l81.171 81.171v329.412z" />
+          <path
+            d="M309.514 55.015c-10.345 0-18.732 8.387-18.732 18.732v38.256c0 10.346 8.386 18.732 18.732 18.732 10.345 0 18.732-8.387 18.732-18.732V73.747c0-10.345-8.387-18.732-18.732-18.732z" />
+        </svg></button>
+    </div>
+
+    <div class="row">
+      <table class="invoice-detail" id="invoice-detail">
+        <thead>
+          <th class="text-left">Cantidad</th>
+          <th class="text-left">Descripcion</th>
+          <th class="text-right">P. Unit</th>
+          <th class="text-right">P. Total</th>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2"></td>
+            <td class="text-right">Total:</td>
+            <td class="text-right" id="facturaPrecioTotal">0</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <div class="row justify-center">
+      <button class="guardar-factura" type="button" id="guardarFactura"><span>Guardar todo</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path
+            d="M506.513 124.12L387.879 5.486A18.813 18.813 0 00374.634 0H18.732C8.387 0 0 8.387 0 18.732v474.537C0 503.613 8.387 512 18.732 512h474.537c10.345 0 18.732-8.387 18.732-18.732V137.366a18.736 18.736 0 00-5.488-13.246zM156.098 37.463h199.805v110.823H156.098V37.463zM400.45 474.537h-288.9V316.935h288.9v157.602zm74.087 0h-36.623V298.204c0-10.345-8.387-18.732-18.732-18.732H92.818c-10.345 0-18.732 8.387-18.732 18.732v176.333H37.463V37.463h81.171v129.555c0 10.345 8.387 18.732 18.732 18.732h237.268c10.345 0 18.732-8.387 18.732-18.732V63.954l81.171 81.171v329.412z" />
+          <path
+            d="M309.514 55.015c-10.345 0-18.732 8.387-18.732 18.732v38.256c0 10.346 8.386 18.732 18.732 18.732 10.345 0 18.732-8.387 18.732-18.732V73.747c0-10.345-8.387-18.732-18.732-18.732z" />
+        </svg></button>
+    </div>
+
+    <div class="row">
+      <pre id="facturaHelper">
+      </pre>
+    </div>
+  </div>
+  <script src="./tarea.js"></script>
+</body>
+
+</html>
